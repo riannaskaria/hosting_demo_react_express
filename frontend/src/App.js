@@ -10,7 +10,7 @@ function App() {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    const backendURL = "http://localhost:4000";
+    const backendURL = process.env.REACT_APP_BACKEND;
 
     // Set the full API URL state, including the endpoint
     const endpoint = '/message';
