@@ -35,7 +35,7 @@ function App() {
       })
       .catch(error => {
         console.error("Error fetching data: ", error);
-        setMessage("Error fetching data from the server");
+        setMessage("Error fetching data from the server!!!!");
         setFetchStatus("Failed to fetch data");
         setErrorMessage(error.message);
       });
