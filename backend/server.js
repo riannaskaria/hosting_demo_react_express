@@ -3,7 +3,6 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = 4000;
 
 // Middleware to enable CORS
 app.use(cors());
@@ -14,6 +13,7 @@ app.get('/message', (req, res) => {
     res.json({ message: 'Hello from the server!' });
 });
 
+const PORT = process.env.PORT || 4000; // Use dynamic PORT for Vercel
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
